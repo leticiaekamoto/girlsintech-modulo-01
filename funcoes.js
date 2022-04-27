@@ -4,7 +4,7 @@ let arquivo = JSON.parse(dados)
 let itens = []
 const regex = /(item_.)/;
 for(let i = 0; i<arquivo.length;i++){
-    var obj = Object.entries(arquivo[i])
+    let obj = Object.entries(arquivo[i])
         obj.map(key => {
         if(regex.test(key)){
             let item = key.join()
@@ -16,7 +16,7 @@ for(let i = 0; i<arquivo.length;i++){
 let merchant = []
 const regex2 = /(merchant_.)/;
 for(let i = 0; i<arquivo.length;i++){
-    var obj = Object.entries(arquivo[i])
+    let obj = Object.entries(arquivo[i])
         obj.map(key => {
         if(regex2.test(key)){
             let merchantDados = key.join()
@@ -28,7 +28,7 @@ for(let i = 0; i<arquivo.length;i++){
 let customer = []
 const regex3 = /(customer_.)/;
 for(let i = 0; i<arquivo.length;i++){
-    var obj = Object.entries(arquivo[i])
+    let obj = Object.entries(arquivo[i])
         obj.map(key => {
         if(regex3.test(key)){
             let customerDados = key.join()
@@ -99,3 +99,4 @@ function change(indice){
     return troco.toFixed(2)
 }
 
+console.log(itens)
